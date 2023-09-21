@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bni1nah2el56k"
-path="res://.godot/imported/icon.svg-964d8c66fbd3bda40c44ca195472a8e1.ctex"
+uid="uid://b66upekw3wc35"
+path="res://.godot/imported/whoosh.png-96d0a0e27e4bd4f6b3d68ab1906293ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/icon.svg"
-dest_files=["res://.godot/imported/icon.svg-964d8c66fbd3bda40c44ca195472a8e1.ctex"]
+source_file="res://sprites/effects/whoosh.png"
+dest_files=["res://.godot/imported/whoosh.png-96d0a0e27e4bd4f6b3d68ab1906293ed.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false
