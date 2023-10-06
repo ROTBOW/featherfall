@@ -4,7 +4,7 @@ extends CharacterBody2D
 const SPEED = 150.0
 
 func _ready():
-	# When the node is loaded, we set the animation is set to the walk animation
+	# When the node is loaded, we set the animation is set to the walk animation.
 	$Character_Body.animation = 'walk'
 	$Whoosh_Effect.hide()
 
