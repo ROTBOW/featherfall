@@ -13,3 +13,7 @@ config_version=5
 config/name="Featherfall"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://sprites/icon.svg"
+
+[aseprite_importers]
+
+aseprite_executable_path="c:/Program Files/Aseprite/Aseprite.exe"
