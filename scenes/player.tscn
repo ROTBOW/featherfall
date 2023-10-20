@@ -1,64 +1,75 @@
-[gd_scene load_steps=13 format=3 uid="uid://bybfpsqedn2gf"]
+[gd_scene load_steps=14 format=3 uid="uid://bybfpsqedn2gf"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_u6tp4"]
-[ext_resource type="Texture2D" uid="uid://ymetov6wpcwe" path="res://sprites/characters/temp_sprite.png" id="2_fx2d0"]
-[ext_resource type="Texture2D" uid="uid://b66upekw3wc35" path="res://sprites/effects/whoosh.png" id="3_y5pto"]
+[ext_resource type="Texture2D" uid="uid://bqft71o61iu1i" path="res://sprites/characters/cd_scaled_backward.png" id="2_iefdy"]
+[ext_resource type="Texture2D" uid="uid://cvamto8ea78q7" path="res://sprites/characters/cd_scaled_forward.png" id="3_8hmjm"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4aqvq"]
-atlas = ExtResource("2_fx2d0")
-region = Rect2(0, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_idy8f"]
+atlas = ExtResource("2_iefdy")
+region = Rect2(0, 0, 64, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bjo0n"]
-atlas = ExtResource("2_fx2d0")
-region = Rect2(32, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_mrh8y"]
+atlas = ExtResource("2_iefdy")
+region = Rect2(64, 0, 64, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rkmmg"]
-atlas = ExtResource("2_fx2d0")
-region = Rect2(0, 32, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_61ig4"]
+atlas = ExtResource("2_iefdy")
+region = Rect2(128, 0, 64, 128)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_m4j0m"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_qil1k"]
+atlas = ExtResource("2_iefdy")
+region = Rect2(192, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fqlqc"]
+atlas = ExtResource("3_8hmjm")
+region = Rect2(0, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mrw6m"]
+atlas = ExtResource("3_8hmjm")
+region = Rect2(64, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_roudg"]
+atlas = ExtResource("3_8hmjm")
+region = Rect2(128, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qe680"]
+atlas = ExtResource("3_8hmjm")
+region = Rect2(192, 0, 64, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_btayr"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4aqvq")
+"texture": SubResource("AtlasTexture_idy8f")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bjo0n")
+"texture": SubResource("AtlasTexture_mrh8y")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rkmmg")
+"texture": SubResource("AtlasTexture_61ig4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qil1k")
 }],
 "loop": true,
-"name": &"walk",
+"name": &"walk_backward",
 "speed": 5.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_18b0k"]
-atlas = ExtResource("3_y5pto")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_w3owg"]
-atlas = ExtResource("3_y5pto")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ppfqx"]
-atlas = ExtResource("3_y5pto")
-region = Rect2(0, 32, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_1l2vr"]
-animations = [{
+}, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_18b0k")
+"texture": SubResource("AtlasTexture_fqlqc")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_w3owg")
+"texture": SubResource("AtlasTexture_mrw6m")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ppfqx")
+"texture": SubResource("AtlasTexture_roudg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qe680")
 }],
 "loop": true,
-"name": &"default",
+"name": &"walk_forward",
 "speed": 5.0
 }]
 
@@ -69,11 +80,8 @@ size = Vector2(32, 32)
 script = ExtResource("1_u6tp4")
 
 [node name="Character_Body" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_m4j0m")
-animation = &"walk"
-
-[node name="Whoosh_Effect" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_1l2vr")
+sprite_frames = SubResource("SpriteFrames_btayr")
+animation = &"walk_forward"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_xfxa0")
