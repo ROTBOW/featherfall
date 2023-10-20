@@ -1,9 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://g11dmov5duc7"]
+[gd_scene load_steps=11 format=3 uid="uid://g11dmov5duc7"]
 
 [ext_resource type="Texture2D" uid="uid://cu5iaq65mt8sf" path="res://tiles/base_grass_tile.png" id="1_ig8tk"]
 [ext_resource type="Texture2D" uid="uid://bitlbk1as2tva" path="res://tiles/flower_tile.png" id="2_qwh4d"]
 [ext_resource type="Texture2D" uid="uid://b0x3wkaqiu4ya" path="res://tiles/texture_grass_tile.png" id="3_wc486"]
-[ext_resource type="Texture2D" uid="uid://bj85iydbln7bn" path="res://tiles/pine_tree.png" id="4_vm5o8"]
 [ext_resource type="Texture2D" uid="uid://86nt7vncy2k4" path="res://tiles/pine_tree_4.png" id="5_bb5gn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nhgld"]
@@ -23,15 +22,6 @@ sources/0 = SubResource("TileSetAtlasSource_nhgld")
 sources/1 = SubResource("TileSetAtlasSource_5l3mk")
 sources/2 = SubResource("TileSetAtlasSource_mnr8a")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7o70y"]
-texture = ExtResource("4_vm5o8")
-0:0/0 = 0
-1:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wfvch"]
 texture = ExtResource("5_bb5gn")
 0:0/0 = 0
@@ -42,7 +32,6 @@ texture = ExtResource("5_bb5gn")
 1:2/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_5ushg"]
-sources/0 = SubResource("TileSetAtlasSource_7o70y")
 sources/3 = SubResource("TileSetAtlasSource_wfvch")
 
 [node name="HubLevel" type="Node2D"]
