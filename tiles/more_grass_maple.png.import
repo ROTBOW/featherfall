@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ct34v5kpueltm"
-path="res://.godot/imported/oak_tree.png-0d2694bf6fc1260979f803ef181aea37.ctex"
+uid="uid://dgj4wf87mpnm"
+path="res://.godot/imported/more_grass_maple.png-421e36e2dea453575e3e3ecc4837a568.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tiles/oak_tree.png"
-dest_files=["res://.godot/imported/oak_tree.png-0d2694bf6fc1260979f803ef181aea37.ctex"]
+source_file="res://tiles/more_grass_maple.png"
+dest_files=["res://.godot/imported/more_grass_maple.png-421e36e2dea453575e3e3ecc4837a568.ctex"]
 
 [params]
 

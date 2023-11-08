@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yhfcsax73ghm"
-path="res://.godot/imported/maple_tree.png-105e152ff53d657143da2c984e12dfab.ctex"
+uid="uid://et5ecloiypsn"
+path="res://.godot/imported/pebble_pond_edge.png-3184992137de8b94fdc9eab4bffd40b0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tiles/maple_tree.png"
-dest_files=["res://.godot/imported/maple_tree.png-105e152ff53d657143da2c984e12dfab.ctex"]
+source_file="res://tiles/pebble_pond_edge.png"
+dest_files=["res://.godot/imported/pebble_pond_edge.png-3184992137de8b94fdc9eab4bffd40b0.ctex"]
 
 [params]
 

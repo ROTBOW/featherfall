@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cn50b0rh5jtk8"
-path="res://.godot/imported/new_maple.png-8f5dc95b2f6775a573dcf5c2eb46baac.ctex"
+uid="uid://q346hslxc2du"
+path="res://.godot/imported/snowy_pine.png-d97a54d6fde20d3696236fda4b82da98.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tiles/new_maple.png"
-dest_files=["res://.godot/imported/new_maple.png-8f5dc95b2f6775a573dcf5c2eb46baac.ctex"]
+source_file="res://tiles/snowy_pine.png"
+dest_files=["res://.godot/imported/snowy_pine.png-d97a54d6fde20d3696236fda4b82da98.ctex"]
 
 [params]
 

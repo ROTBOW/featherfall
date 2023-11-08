@@ -1,13 +1,11 @@
-[gd_scene load_steps=25 format=3 uid="uid://g11dmov5duc7"]
+[gd_scene load_steps=21 format=3 uid="uid://g11dmov5duc7"]
 
 [ext_resource type="Texture2D" uid="uid://cu5iaq65mt8sf" path="res://tiles/base_grass_tile.png" id="1_ig8tk"]
 [ext_resource type="Texture2D" uid="uid://bitlbk1as2tva" path="res://tiles/flower_tile.png" id="2_qwh4d"]
 [ext_resource type="Texture2D" uid="uid://b0x3wkaqiu4ya" path="res://tiles/texture_grass_tile.png" id="3_wc486"]
+[ext_resource type="Texture2D" uid="uid://et5ecloiypsn" path="res://tiles/pebble_pond_edge.png" id="4_2dccx"]
 [ext_resource type="Texture2D" uid="uid://86nt7vncy2k4" path="res://tiles/pine_tree_4.png" id="5_bb5gn"]
-[ext_resource type="Texture2D" uid="uid://yhfcsax73ghm" path="res://tiles/maple_tree.png" id="5_jxled"]
-[ext_resource type="Texture2D" uid="uid://ct34v5kpueltm" path="res://tiles/oak_tree.png" id="6_kfsje"]
 [ext_resource type="Texture2D" uid="uid://n0s7rwayjrk6" path="res://tiles/base_water.png" id="7_xwwr4"]
-[ext_resource type="Texture2D" uid="uid://cn50b0rh5jtk8" path="res://tiles/new_maple.png" id="8_kyv0n"]
 [ext_resource type="Texture2D" uid="uid://d1hh5oe2at1ad" path="res://tiles/new_oak.png" id="9_8h60h"]
 [ext_resource type="Texture2D" uid="uid://c01d01pvpq5nh" path="res://tiles/new_pine.png" id="10_2yqkt"]
 [ext_resource type="Texture2D" uid="uid://b3v8xgxf3t3cf" path="res://tiles/texture_water.png" id="11_2k6wg"]
@@ -29,8 +27,8 @@ sources/0 = SubResource("TileSetAtlasSource_nhgld")
 sources/1 = SubResource("TileSetAtlasSource_5l3mk")
 sources/2 = SubResource("TileSetAtlasSource_mnr8a")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rv7ff"]
-texture = ExtResource("5_jxled")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0h6yq"]
+texture = ExtResource("4_2dccx")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -40,15 +38,6 @@ texture = ExtResource("5_jxled")
 0:2/0 = 0
 1:2/0 = 0
 2:2/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_irixn"]
-texture = ExtResource("6_kfsje")
-0:0/0 = 0
-1:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wfvch"]
 texture = ExtResource("5_bb5gn")
@@ -61,18 +50,7 @@ texture = ExtResource("5_bb5gn")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rwqee"]
 texture = ExtResource("7_xwwr4")
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g3627"]
-texture = ExtResource("8_kyv0n")
 0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-2:1/0 = 0
-1:1/0 = 0
-0:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4xpf3"]
 texture = ExtResource("9_8h60h")
@@ -94,16 +72,15 @@ texture = ExtResource("10_2yqkt")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_24nib"]
 texture = ExtResource("11_2k6wg")
+0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_5ushg"]
 sources/3 = SubResource("TileSetAtlasSource_wfvch")
-sources/1 = SubResource("TileSetAtlasSource_rv7ff")
-sources/2 = SubResource("TileSetAtlasSource_irixn")
 sources/4 = SubResource("TileSetAtlasSource_rwqee")
-sources/5 = SubResource("TileSetAtlasSource_g3627")
 sources/6 = SubResource("TileSetAtlasSource_4xpf3")
 sources/7 = SubResource("TileSetAtlasSource_qhgx2")
 sources/8 = SubResource("TileSetAtlasSource_24nib")
+sources/0 = SubResource("TileSetAtlasSource_0h6yq")
 
 [node name="HubLevel" type="Node2D"]
 
@@ -115,4 +92,4 @@ layer_0/tile_data = PackedInt32Array(-12124350, 0, 0, -12058814, 0, 0, -11993278
 [node name="FloraTileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_5ushg")
 format = 2
-layer_0/tile_data = PackedInt32Array(-196607, 3, 0, -131071, 3, 1, -65535, 3, 2, -196606, 65539, 0, -131070, 65539, 1, -65534, 65539, 2, -131074, 0, 0, -65538, 0, 1, -2, 0, 2, -131073, 65536, 0, -65537, 65536, 1, -1, 65536, 2, 65536, 0, 0, 131072, 0, 1, 196608, 0, 2, 65537, 65536, 0, 131073, 65536, 1, 196609, 65536, 2, -65540, 0, 0, -4, 0, 1, 65532, 0, 2, -65539, 65536, 0, -3, 65536, 1, 65533, 65536, 2, 196599, 1, 0, 262135, 1, 1, 327671, 1, 2, 196600, 65537, 0, 262136, 65537, 1, 327672, 65537, 2, 196601, 131073, 0, 262137, 131073, 1, 327673, 131073, 2, 589821, 1, 0, 655357, 1, 1, 720893, 1, 2, 589822, 65537, 0, 655358, 65537, 1, 720894, 65537, 2, 589823, 131073, 0, 655359, 131073, 1, 720895, 131073, 2, 589813, 2, 0, 655349, 2, 1, 720885, 2, 2, 589814, 65538, 0, 655350, 65538, 1, 720886, 65538, 2, 393216, 2, 0, 458752, 2, 1, 524288, 2, 2, 393217, 65538, 0, 458753, 65538, 1, 524289, 65538, 2, -524282, 2, 0, -458746, 2, 1, -393210, 2, 2, -524281, 65538, 0, -458745, 65538, 1, -393209, 65538, 2, -786432, 2, 0, -720896, 2, 1, -655360, 2, 2, -786431, 65538, 0, -720895, 65538, 1, -655359, 65538, 2, -589837, 2, 0, -524301, 2, 1, -458765, 2, 2, -589836, 65538, 0, -524300, 65538, 1, -458764, 65538, 2, -393231, 1, 0, -327695, 1, 1, -262159, 1, 2, -393230, 65537, 0, -327694, 65537, 1, -262158, 65537, 2, -393229, 131073, 0, -327693, 131073, 1, -262157, 131073, 2, -1245190, 1, 0, -1179654, 1, 1, -1114118, 1, 2, -1245189, 65537, 0, -1179653, 65537, 1, -1114117, 65537, 2, -1245188, 131073, 0, -1179652, 131073, 1, -1114116, 131073, 2, -1179643, 0, 0, -1114107, 0, 1, -1048571, 0, 2, -1179642, 65536, 0, -1114106, 65536, 1, -1048570, 65536, 2, -1114105, 0, 0, -1048569, 0, 1, -983033, 0, 2, -1114104, 65536, 0, -1048568, 65536, 1, -983032, 65536, 2, -983036, 0, 0, -917500, 0, 1, -851964, 0, 2, -983035, 65536, 0, -917499, 65536, 1, -851963, 65536, 2, -917498, 0, 0, -851962, 0, 1, -786426, 0, 2, -917497, 65536, 0, -851961, 65536, 1, -786425, 65536, 2, -720894, 6, 0, -655358, 6, 1, -589822, 6, 2, -720893, 65542, 0, -655357, 65542, 1, -589821, 65542, 2, -589820, 6, 0, -524284, 6, 1, -458748, 6, 2, -589819, 65542, 0, -524283, 65542, 1, -458747, 65542, 2, -1179651, 5, 0, -1114115, 5, 1, -1048579, 5, 2, -1179650, 65541, 0, -1114114, 65541, 1, -1048578, 65541, 2, -1179649, 131077, 0, -1114113, 131077, 1, -1048577, 131077, 2, -1048582, 5, 0, -983046, 5, 1, -917510, 5, 2, -1048581, 65541, 0, -983045, 65541, 1, -917509, 65541, 2, -1048580, 131077, 0, -983044, 131077, 1, -917508, 131077, 2, -1048574, 7, 0, -983038, 7, 1, -917502, 7, 2, -1048573, 65543, 0, -983037, 65543, 1, -917501, 65543, 2, -1245181, 7, 0, -1179645, 7, 1, -1114109, 7, 2, -1245180, 65543, 0, -1179644, 65543, 1, -1114108, 65543, 2)
+layer_0/tile_data = PackedInt32Array(-524278, 6, 0, -458742, 6, 1, -393206, 6, 2, -524277, 65542, 0, -458741, 65542, 1, -393205, 65542, 2, -262123, 6, 0, -196587, 6, 1, -131051, 6, 2, -262122, 65542, 0, -196586, 65542, 1, -131050, 65542, 2, -786409, 6, 0, -720873, 6, 1, -655337, 6, 2, -786408, 65542, 0, -720872, 65542, 1, -655336, 65542, 2, -720923, 6, 0, -655387, 6, 1, -589851, 6, 2, -720922, 65542, 0, -655386, 65542, 1, -589850, 65542, 2, -327704, 6, 0, -262168, 6, 1, -196632, 6, 2, -327703, 65542, 0, -262167, 65542, 1, -196631, 65542, 2, 458723, 6, 0, 524259, 6, 1, 589795, 6, 2, 458724, 65542, 0, 524260, 65542, 1, 589796, 65542, 2, 851945, 6, 0, 917481, 6, 1, 983017, 6, 2, 851946, 65542, 0, 917482, 65542, 1, 983018, 65542, 2, 786444, 6, 0, 851980, 6, 1, 917516, 6, 2, 786445, 65542, 0, 851981, 65542, 1, 917517, 65542, 2, -917510, 6, 0, -851974, 6, 1, -786438, 6, 2, -917509, 65542, 0, -851973, 65542, 1, -786437, 65542, 2, 262125, 7, 0, 327661, 7, 1, 393197, 7, 2, 262126, 65543, 0, 327662, 65543, 1, 393198, 65543, 2, 196594, 7, 0, 262130, 7, 1, 327666, 7, 2, 196595, 65543, 0, 262131, 65543, 1, 327667, 65543, 2, 393200, 7, 0, 458736, 7, 1, 524272, 7, 2, 393201, 65543, 0, 458737, 65543, 1, 524273, 65543, 2, 655342, 7, 0, 720878, 7, 1, 786414, 7, 2, 655343, 65543, 0, 720879, 65543, 1, 786415, 65543, 2, 655356, 7, 0, 720892, 7, 1, 786428, 7, 2, 655357, 65543, 0, 720893, 65543, 1, 786429, 65543, 2, 786424, 7, 0, 851960, 7, 1, 917496, 7, 2, 786425, 65543, 0, 851961, 65543, 1, 917497, 65543, 2, 851963, 7, 0, 917499, 7, 1, 983035, 7, 2, 851964, 65543, 0, 917500, 65543, 1, 983036, 65543, 2, 327674, 7, 0, 393210, 7, 1, 458746, 7, 2, 327675, 65543, 0, 393211, 65543, 1, 458747, 65543, 2, 524276, 4, 0, 458741, 65536, 0, 458742, 65536, 0, 524278, 8, 0, 524279, 4, 0, 589815, 4, 0, 655351, 8, 0, 720887, 65536, 2, 720886, 65536, 2, 720884, 65536, 2, 655347, 0, 1, 589812, 8, 0, 589811, 0, 1, 655348, 4, 0, 589813, 4, 0, 524277, 8, 0, 589814, 8, 0, 655350, 4, 0, 655349, 8, 0, 720885, 65536, 2, 458739, 0, 0, 458744, 131072, 0, 720888, 131072, 2, 720883, 0, 2, 524275, 0, 1, 458740, 65536, 0, 458743, 65536, 0, 524280, 131072, 1, 589816, 131072, 1, 655352, 131072, 1)
