@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bas6v2b0ucetv"]
 
-[ext_resource type="Script" path="res://scripts/OptionsMenu.gd" id="1_jotrv"]
+[ext_resource type="Script" path="res://scripts/options_menu.gd" id="1_dut8k"]
 
 [node name="OptionsMenu" type="Control"]
 layout_mode = 3
@@ -9,7 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_jotrv")
+script = ExtResource("1_dut8k")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -31,14 +31,17 @@ layout_mode = 2
 [node name="Difficulty" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Difficulty"
+script = ExtResource("1_dut8k")
 
 [node name="Credits" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Credits"
+script = ExtResource("1_dut8k")
 
 [node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Back"
+script = ExtResource("1_dut8k")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Difficulty" to="." method="_on_difficulty_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
