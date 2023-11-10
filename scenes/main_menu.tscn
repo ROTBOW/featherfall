@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bpn7jw6frfmux"]
+[gd_scene load_steps=4 format=3 uid="uid://bpn7jw6frfmux"]
 
 [ext_resource type="Texture2D" uid="uid://dd66my0br66fj" path="res://images/temp_menu_background.png" id="1_hxmec"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_ljy45"]
+[ext_resource type="SpriteFrames" uid="uid://djvfqnojor8fb" path="res://animations/title.tres" id="3_sur23"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -9,31 +11,62 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ljy45")
 
 [node name="TempMenuBackground" type="Sprite2D" parent="."]
 position = Vector2(555, 335)
 scale = Vector2(0.650223, 0.671387)
 texture = ExtResource("1_hxmec")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -545.0
-offset_top = -196.0
-offset_right = -180.0
-offset_bottom = -156.0
+offset_left = -190.0
+offset_top = -70.0
+offset_right = 190.0
+offset_bottom = 70.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="Panel"]
-layout_mode = 1
-offset_left = 4.0
-offset_top = -6.0
-offset_right = 363.0
-offset_bottom = 46.0
-theme_override_font_sizes/font_size = 35
-text = "Featherfall: Avis Artis"
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="New Game" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "New Game"
+
+[node name="Load Game" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Load Game"
+
+[node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Options"
+
+[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Exit"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 2
+offset_left = 309.0
+offset_top = 53.0
+offset_right = 824.0
+offset_bottom = 219.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Panel"]
+position = Vector2(257.5, 81)
+scale = Vector2(2.82778, 2.10667)
+sprite_frames = ExtResource("3_sur23")
+animation = &"new_animation"
+autoplay = "new_animation"
+frame_progress = 0.889206
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/New Game" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Load Game" to="." method="_on_load_game_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
