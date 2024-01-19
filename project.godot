@@ -17,3 +17,7 @@ config/icon="res://sprites/icon.svg"
 [aseprite_importers]
 
 aseprite_executable_path="c:/Program Files/Aseprite/Aseprite.exe"
+
+[dotnet]
+
+project/assembly_name="Featherfall"

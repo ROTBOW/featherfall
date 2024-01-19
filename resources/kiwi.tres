@@ -1,0 +1,109 @@
+[gd_resource type="Resource" script_class="bird_resource" load_steps=16 format=3 uid="uid://dooxh1t4lwpdg"]
+
+[ext_resource type="Script" path="res://scripts/bird_resource_base.gd" id="1_drl22"]
+[ext_resource type="Texture2D" uid="uid://b5htf6ig3auss" path="res://sprites/kiwi/kiwi_draft1_front.png" id="2_oswfk"]
+[ext_resource type="Texture2D" uid="uid://yly1fqyodl50" path="res://sprites/kiwi/kiwi_Draft_1.png" id="3_g6i0r"]
+[ext_resource type="Texture2D" uid="uid://tgvxvij03oc" path="res://sprites/kiwi/kiwi_draft1_back.png" id="4_3ydvl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqoxv"]
+atlas = ExtResource("2_oswfk")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ht66j"]
+atlas = ExtResource("2_oswfk")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vaxiq"]
+atlas = ExtResource("2_oswfk")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_thivi"]
+atlas = ExtResource("2_oswfk")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1o6ay"]
+atlas = ExtResource("3_g6i0r")
+region = Rect2(0, 0, 20, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p3umh"]
+atlas = ExtResource("3_g6i0r")
+region = Rect2(20, 0, 20, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvj5m"]
+atlas = ExtResource("4_3ydvl")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4vbl"]
+atlas = ExtResource("4_3ydvl")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c7klv"]
+atlas = ExtResource("4_3ydvl")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3k25"]
+atlas = ExtResource("4_3ydvl")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fvkx8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqoxv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ht66j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vaxiq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_thivi")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1o6ay")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p3umh")
+}],
+"loop": true,
+"name": &"sides",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hvj5m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4vbl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c7klv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3k25")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_drl22")
+spriteFrames = SubResource("SpriteFrames_fvkx8")
+health = 0
+happiness = 0
+hunger = 0
+enrichment = 0
+speed = 0
+ideal_pop_size = 4
+size = "Medium"
+biome = "Forest"
+diet = "Omnivore"
+drops = PackedStringArray("Feathers")
+activity_time = ""

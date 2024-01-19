@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="bird_resource" load_steps=2 format=3 uid="uid://c4cegsbqx2v2n"]
+
+[ext_resource type="Script" path="res://scripts/bird_resource_base.gd" id="1_vi5vd"]
+
+[resource]
+script = ExtResource("1_vi5vd")
+health = 0
+happiness = 0
+hunger = 0
+enrichment = 0
+speed = 0
+ideal_pop_size = 0
+size = "Small"
+biome = "Forest"
+diet = "Carnivore"
+drops = PackedStringArray("Feathers")
+activity_time = "Nocturnal"
