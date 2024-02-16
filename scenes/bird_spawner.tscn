@@ -7,3 +7,7 @@ script = ExtResource("1_r3kwb")
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
+
+[node name="SpawnedBirds" type="Node2D" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

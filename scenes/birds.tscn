@@ -97,7 +97,6 @@ animations = [{
 size = Vector2(15, 16)
 
 [node name="Bird" type="CharacterBody2D"]
-position = Vector2(116, 53)
 scale = Vector2(2, 2)
 collision_mask = 0
 script = ExtResource("1_mtd1i")
@@ -110,6 +109,5 @@ animation = &"down"
 shape = SubResource("RectangleShape2D_2fp5y")
 
 [node name="Timer" type="Timer" parent="."]
-autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
