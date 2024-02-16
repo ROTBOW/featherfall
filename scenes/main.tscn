@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0p2tu3wdnmn2"]
+
+[ext_resource type="PackedScene" uid="uid://d2bga8rli2fu4" path="res://scenes/hub_level.tscn" id="1_65jgc"]
+[ext_resource type="PackedScene" uid="uid://dgmlxgud5tt0" path="res://scenes/bird_spawner.tscn" id="2_f2r2n"]
+[ext_resource type="PackedScene" uid="uid://bybfpsqedn2gf" path="res://scenes/player.tscn" id="2_fd61r"]
+
+[node name="Main" type="Node"]
+
+[node name="HubLevel" parent="." instance=ExtResource("1_65jgc")]
+
+[node name="BirdSpawner" parent="." instance=ExtResource("2_f2r2n")]
+position = Vector2(241.634, 85.9212)
+
+[node name="player" parent="." instance=ExtResource("2_fd61r")]

@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var spawned_birds = $SpawnedBirds
-@onready var tilemap = get_tree().root.get_node("HubLevel/BaseGrassTileMap")
+## @onready var tilemap = get_tree().root.get_node("Main/HubLevel/BaseGrassTileMap")
 
 
 @export var max_birds = 4
@@ -10,14 +10,14 @@ var rng = RandomNumberGenerator.new()
 
 
 func spawn_bird():
-	var random_position = Vector2(
-		rng.randi() % tilemap.get_used_rect().size.x,
-		rng.randi() % tilemap.get_used_rect().size.y
-	)
+##	var random_position = Vector2(
+##		rng.randi() % tilemap.get_used_rect().size.x,
+##		rng.randi() % tilemap.get_used_rect().size.y
+##	)
 	var bird = Global.bird_scene.instantiate()
-	bird.position = tilemap.map_to_local(random_position) + Vector2(16, 16) / 2
+##	bird.position = tilemap.map_to_local(random_position) + Vector2(16, 16) / 2
+	bird.position = Vector2(0,0)
 	spawned_birds.add_child(bird)
-	print(bird.position)
 	
 
 

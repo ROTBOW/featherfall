@@ -44,6 +44,7 @@ func choose(array):
 	
 func move(delta):
 	position += dir * speed * delta
+	print(position)
 	
 func _on_timer_timeout():
 	$Timer.wait_time = choose([0.5, 1, 1.5])
